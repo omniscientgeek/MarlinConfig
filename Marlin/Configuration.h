@@ -129,7 +129,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 //#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
 /**
@@ -1571,10 +1571,12 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#if ENABLED(CR10V3_BLTOUCH)
+/*#if ENABLED(CR10V3_BLTOUCH)
   #define AUTO_BED_LEVELING_BILINEAR
+#endif*/
+#if ENABLED(CR10V3_BLTOUCH)
+#define AUTO_BED_LEVELING_UBL
 #endif
-//#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
 /**
@@ -1590,10 +1592,10 @@
 /**
  * Auto-leveling needs preheating
  */
-//#define PREHEAT_BEFORE_LEVELING
+#define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
-  #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
-  #define LEVELING_BED_TEMP     50
+  #define LEVELING_NOZZLE_TEMP 215   // (°C) Only applies to E0 at this time
+  #define LEVELING_BED_TEMP     45
 #endif
 
 /**
