@@ -119,7 +119,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 1
+#define SERIAL_PORT -1
 
 /**
  * Serial Port Baud Rate
@@ -140,7 +140,7 @@
  * Currently Ethernet (-2) is only supported on Teensy 4.1 boards.
  * :[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 1
 //#define BAUDRATE_2 250000   // Enable to override BAUDRATE
 
 /**
@@ -907,7 +907,7 @@
 //#define USE_WMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
-//#define ENDSTOPPULLUPS
+#define ENDSTOPPULLUPS
 #if DISABLED(ENDSTOPPULLUPS)
   // Disable ENDSTOPPULLUPS to set pullups individually
   //#define ENDSTOPPULLUP_XMIN
@@ -955,8 +955,6 @@
   //#define ENDSTOPPULLDOWN_WMAX
   //#define ENDSTOPPULLDOWN_ZMIN_PROBE
 #endif
-#define ENDSTOPPULLDOWN_ZMIN_PROBE
-#define ENDSTOPPULLUP_ZMIN
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1132,8 +1130,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-//FOO
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN 
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN 
 
 // Force the use of the probe for Z-axis homing
 #if ENABLED(CR10V3_BLTOUCH)
@@ -1841,8 +1838,7 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-#define LEVEL_BED_CORNERS
-//#define LCD_BED_TRAMMING
+#define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
   #define BED_TRAMMING_INSET_LFRB { 45, 45, 45, 45 }  // (mm) Left, Front, Right, Back insets
