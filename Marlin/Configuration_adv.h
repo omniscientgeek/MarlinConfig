@@ -1004,7 +1004,8 @@
 #endif
 #if ENABLED(ASSISTED_TRAMMING)
   // Define positions for probe points.
-  #define TRAMMING_POINT_XY {{ 45, 289 }, { 45, 48 }, { 276, 48 }, { 276, 288 }}
+
+  #define TRAMMING_POINT_XY {{ 49, 277 }, { 49, 36 }, { 276, 36 }, { 276, 277 }}
 
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Back-Left"
@@ -3974,7 +3975,7 @@
  *  - M206 and M428 are disabled.
  *  - G92 will revert to its behavior from Marlin 1.0.
  */
-#define NO_WORKSPACE_OFFSETS
+//#define NO_WORKSPACE_OFFSETS
 
 // Extra options for the M114 "Current Position" report
 #define M114_DETAIL           // Use 'M114` for details to check planner calculations
