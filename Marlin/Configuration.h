@@ -2527,7 +2527,7 @@
 // RepRapDiscount FULL GRAPHIC Smart Controller
 // https://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
-//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // K.3D Full Graphic Smart Controller
@@ -2890,7 +2890,7 @@
 //
 // Generic TFT with detailed options
 //
-#define TFT_GENERIC//Foo 
+//#define TFT_GENERIC
 #if ENABLED(TFT_GENERIC)
   // :[ 'AUTO', 'ST7735', 'ST7789', 'ST7796', 'R61505', 'ILI9328', 'ILI9341', 'ILI9488' ]
   #define TFT_DRIVER ILI9341
@@ -2917,7 +2917,7 @@
  *   root of your SD card, together with the compiled firmware.
  */
 //#define TFT_CLASSIC_UI
-#define TFT_COLOR_UI
+//#define TFT_COLOR_UI
 //#define TFT_LVGL_UI
 
 #if ENABLED(TFT_LVGL_UI)
@@ -2950,7 +2950,7 @@
 //
 // Touch Screen Settings
 //
-#define TOUCH_SCREEN
+//#define TOUCH_SCREEN
 #if ENABLED(TOUCH_SCREEN)
   #define BUTTON_DELAY_EDIT  50 // (ms) Button repeat delay for edit screens
   #define BUTTON_DELAY_MENU 250 // (ms) Button repeat delay for menus
