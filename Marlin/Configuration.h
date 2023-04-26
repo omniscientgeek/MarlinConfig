@@ -1138,7 +1138,7 @@
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  * Updated E Steps to 382.14 for CR-10 V3 Direct Drive
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 41.00, 41.00, 200.00, 180 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 40.10, 40.10, 204.80, 205.5 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1442,7 +1442,7 @@
 //BIQU 2-in-1
 //#define NOZZLE_TO_PROBE_OFFSET { 43, 15, -1 }
 //CR-10 V3 Direct Drive Standard
-#define NOZZLE_TO_PROBE_OFFSET { 46, 2, -3 }
+#define NOZZLE_TO_PROBE_OFFSET { 43, 2, -1.575 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
